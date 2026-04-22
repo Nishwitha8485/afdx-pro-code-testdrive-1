@@ -60,10 +60,10 @@ Here are the step types and what to look for:
 ### Diagnostic Patterns
 
 **To diagnose wrong subagent routing:**
-1. Find the `LLMStep` where `agent_name` is `topic_selector`
+1. Find the `LLMStep` where `agent_name` is `agent_router`
 2. Check `tools_sent` — are the expected transition tools listed?
 3. Check `response_messages` — which tool did the LLM select?
-4. Check the `messages_sent` system prompt — does the topic selector have enough
+4. Check the `messages_sent` system prompt — does the agent router have enough
    context to route correctly?
 
 **To diagnose actions not firing:**

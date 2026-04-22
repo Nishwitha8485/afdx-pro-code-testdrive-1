@@ -106,7 +106,7 @@ language:
     ...
 
 # 7. START_AGENT (required) - Entry point
-start_agent topic_selector:
+start_agent agent_router:
     description: "..."
     reasoning:
         instructions: ->
@@ -546,8 +546,8 @@ variables:
         source: @MessagingSession.MessagingEndUserId
         description: "This variable may also be referred to as MessagingEndUser Id"
 
-start_agent topic_selector:
-    description: "Route the customer to the appropriate topic"
+start_agent agent_router:
+    description: "Route the customer to the appropriate subagent"
     reasoning:
         actions:
             go_order_info: @utils.transition to @subagent.order_info
